@@ -13,7 +13,7 @@ namespace TrackerLibrary
 
         public static void InitializeConnections(DatabaseType db)
         {
-
+            // Можно заменить на switch
             if (db == DatabaseType.Sql) // == true
             {
                 // TODO - Set up the SQL Connector properly
