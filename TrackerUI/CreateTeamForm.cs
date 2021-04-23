@@ -29,8 +29,13 @@ namespace TrackerUI
                 p.EmailAddress = emailValue.Text;
                 p.CellPhoneNumber = cellphoneValue.Text;
 
-                GlobalConfig.Connection.CreatePrize(p);
+                GlobalConfig.Connection.CreatePerson(p);
 
+
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                emailValue.Text = "";
+                cellphoneValue.Text = "";
             }
             else
             {
