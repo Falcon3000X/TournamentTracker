@@ -11,6 +11,11 @@ namespace TrackerLibrary
     {
         private const string PrizesFile = "PrizeModels.csv";
 
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         // TODO - Wire up the CreatePrizefor the text files
         public PrizeModel CreatePrize(PrizeModel model)
         {
