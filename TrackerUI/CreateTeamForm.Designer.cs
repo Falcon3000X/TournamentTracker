@@ -97,6 +97,7 @@ namespace TrackerUI
             this.AddMemberbutton.TabIndex = 19;
             this.AddMemberbutton.Text = "Add Member";
             this.AddMemberbutton.UseVisualStyleBackColor = true;
+            this.AddMemberbutton.Click += new System.EventHandler(this.AddMemberbutton_Click);
             // 
             // selectTeamMemberDropDown
             // 
