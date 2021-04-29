@@ -43,7 +43,7 @@ namespace TrackerUI
             this.TeamPlayerslabel = new System.Windows.Forms.Label();
             this.DeleteSelectedPlayersbutton = new System.Windows.Forms.Button();
             this.DeleteSelectedPrizebutton = new System.Windows.Forms.Button();
-            this.prizesLAbel = new System.Windows.Forms.Label();
+            this.prizeLabel = new System.Windows.Forms.Label();
             this.PrizeslistBox = new System.Windows.Forms.ListBox();
             this.CreateTournamentbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -206,16 +206,16 @@ namespace TrackerUI
             this.DeleteSelectedPrizebutton.Text = "Delete Selected";
             this.DeleteSelectedPrizebutton.UseVisualStyleBackColor = true;
             // 
-            // prizesLAbel
+            // prizeLabel
             // 
-            this.prizesLAbel.AutoSize = true;
-            this.prizesLAbel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.prizesLAbel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.prizesLAbel.Location = new System.Drawing.Point(375, 322);
-            this.prizesLAbel.Name = "prizesLAbel";
-            this.prizesLAbel.Size = new System.Drawing.Size(187, 37);
-            this.prizesLAbel.TabIndex = 22;
-            this.prizesLAbel.Text = "Team / Players";
+            this.prizeLabel.AutoSize = true;
+            this.prizeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.prizeLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.prizeLabel.Location = new System.Drawing.Point(375, 322);
+            this.prizeLabel.Name = "prizeLabel";
+            this.prizeLabel.Size = new System.Drawing.Size(85, 37);
+            this.prizeLabel.TabIndex = 22;
+            this.prizeLabel.Text = "Prizes";
             // 
             // PrizeslistBox
             // 
@@ -250,7 +250,7 @@ namespace TrackerUI
             this.ClientSize = new System.Drawing.Size(858, 618);
             this.Controls.Add(this.CreateTournamentbutton);
             this.Controls.Add(this.DeleteSelectedPrizebutton);
-            this.Controls.Add(this.prizesLAbel);
+            this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.PrizeslistBox);
             this.Controls.Add(this.DeleteSelectedPlayersbutton);
             this.Controls.Add(this.TeamPlayerslabel);
@@ -290,7 +290,7 @@ namespace TrackerUI
         private System.Windows.Forms.Label TeamPlayerslabel;
         private System.Windows.Forms.Button DeleteSelectedPlayersbutton;
         private System.Windows.Forms.Button DeleteSelectedPrizebutton;
-        private System.Windows.Forms.Label prizesLAbel;
+        private System.Windows.Forms.Label prizeLabel;
         private System.Windows.Forms.ListBox PrizeslistBox;
         private System.Windows.Forms.Button CreateTournamentbutton;
     }
