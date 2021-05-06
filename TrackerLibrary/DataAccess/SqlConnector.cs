@@ -105,7 +105,26 @@ namespace TrackerLibrary
             return output;
         }
 
-        public List<TeamModel> GetTeam_All(TeamModel model)
+        //public List<TeamModel> GetTeam_All(TeamModel model)
+        //{
+        //    List<TeamModel> output;
+
+        //    using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+        //    {
+        //        output = connection.Query<TeamModel>("dbo.spTeam_GetAll").ToList();
+
+        //        foreach (TeamModel team in output)
+        //        {
+        //            var p = new DynamicParameters();
+        //            p.Add("@TeamId", team.Id);
+
+        //     //       team.TeamMembers = connection.Query<TeamModel>("dbo.spTeam_GetAll", p, commandType: CommandType.StoredProcedure).ToList();
+        //        }
+        //    }
+        //    return output;
+        //}
+
+        public List<TeamModel> GetTeam_All()
         {
             List<TeamModel> output;
 
@@ -118,13 +137,13 @@ namespace TrackerLibrary
                     var p = new DynamicParameters();
                     p.Add("@TeamId", team.Id);
 
-                    team.TeamMembers = connection.Query<PersonModel>("dbo.spTeam_GetAll", p, commandType: CommandType.StoredProcedure).ToList();
+                    team.TeamMembers = connection.Query<PersonModel>("dbo.spTeamMembers_GetByTeam", p,commandType: CommandType.StoredProcedure).ToList();
                 }
             }
             return output;
         }
 
-        public List<TeamModel> GetTeam_All()
+        public List<TeamModel> GetTeam_All(TeamModel model)
         {
             throw new NotImplementedException();
         }
