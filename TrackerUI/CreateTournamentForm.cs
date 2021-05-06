@@ -20,24 +20,35 @@ namespace TrackerUI
         public CreateTournamentForm()
         {
             InitializeComponent();
-            InitializeLists();
+            WireUpLists();
         }
 
-        private void InitializeLists()
+        private void WireUpLists()
         {
+            selectTeamDropDown.DataSource = null;
             selectTeamDropDown.DataSource = availableTeams;
             selectTeamDropDown.DisplayMember = "TeamName";
 
+            tournamentTeamsListBox.DataSource = null;
             tournamentTeamsListBox.DataSource = selectedTeams;
             tournamentTeamsListBox.DisplayMember = "TeamName";
 
+            PrizeslistBox.DataSource = null;
             PrizeslistBox.DataSource = selectedPrizes;
             PrizeslistBox.DisplayMember = "PlaceName";
         }
 
         private void AddTeambutton_Click(object sender, EventArgs e)
         {
+            TeamModel t = (TeamModel)selectTeamDropDown.SelectedItem;
 
+            if (t != null)
+            {
+                availableTeams.Remove(t);
+                selectedTeams.Add(t);
+
+                WireUpLists();
+            }
         }
     }
 }
