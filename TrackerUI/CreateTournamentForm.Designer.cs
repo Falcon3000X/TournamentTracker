@@ -32,7 +32,7 @@ namespace TrackerUI
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.tournamentNameValue = new System.Windows.Forms.TextBox();
             this.teamOneScoreLabellabel = new System.Windows.Forms.Label();
-            this.teamOneScoreValue = new System.Windows.Forms.TextBox();
+            this.entryFeeValue = new System.Windows.Forms.TextBox();
             this.EntryFeelabel = new System.Windows.Forms.Label();
             this.selectTeamDropDown = new System.Windows.Forms.ComboBox();
             this.SelectTeamLabel = new System.Windows.Forms.Label();
@@ -77,13 +77,13 @@ namespace TrackerUI
             this.teamOneScoreLabellabel.TabIndex = 9;
             this.teamOneScoreLabellabel.Text = "Tournament Name";
             // 
-            // teamOneScoreValue
+            // entryFeeValue
             // 
-            this.teamOneScoreValue.Location = new System.Drawing.Point(150, 221);
-            this.teamOneScoreValue.Name = "teamOneScoreValue";
-            this.teamOneScoreValue.Size = new System.Drawing.Size(100, 35);
-            this.teamOneScoreValue.TabIndex = 12;
-            this.teamOneScoreValue.Text = "0";
+            this.entryFeeValue.Location = new System.Drawing.Point(150, 221);
+            this.entryFeeValue.Name = "entryFeeValue";
+            this.entryFeeValue.Size = new System.Drawing.Size(100, 35);
+            this.entryFeeValue.TabIndex = 12;
+            this.entryFeeValue.Text = "0";
             // 
             // EntryFeelabel
             // 
@@ -242,6 +242,7 @@ namespace TrackerUI
             this.CreateTournamentbutton.TabIndex = 24;
             this.CreateTournamentbutton.Text = "Create Tournament";
             this.CreateTournamentbutton.UseVisualStyleBackColor = true;
+            this.CreateTournamentbutton.Click += new System.EventHandler(this.CreateTournamentbutton_Click);
             // 
             // CreateTournamentForm
             // 
@@ -261,7 +262,7 @@ namespace TrackerUI
             this.Controls.Add(this.createNewTeamLink);
             this.Controls.Add(this.selectTeamDropDown);
             this.Controls.Add(this.SelectTeamLabel);
-            this.Controls.Add(this.teamOneScoreValue);
+            this.Controls.Add(this.entryFeeValue);
             this.Controls.Add(this.EntryFeelabel);
             this.Controls.Add(this.tournamentNameValue);
             this.Controls.Add(this.teamOneScoreLabellabel);
@@ -280,7 +281,7 @@ namespace TrackerUI
         private System.Windows.Forms.Label HeaderLabel;
         private System.Windows.Forms.TextBox tournamentNameValue;
         private System.Windows.Forms.Label teamOneScoreLabellabel;
-        private System.Windows.Forms.TextBox teamOneScoreValue;
+        private System.Windows.Forms.TextBox entryFeeValue;
         private System.Windows.Forms.Label EntryFeelabel;
         private System.Windows.Forms.ComboBox selectTeamDropDown;
         private System.Windows.Forms.Label SelectTeamLabel;
