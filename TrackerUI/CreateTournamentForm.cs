@@ -87,5 +87,10 @@ namespace TrackerUI
 
 
         }
+
+        private void createNewTeamLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
