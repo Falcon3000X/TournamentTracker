@@ -83,11 +83,11 @@ namespace TrackerLibrary
 
         public void CreateTournament(TournamentModel model)
         {
-            List<TournamentModel> tournaments = TournamentFile.FullFilePath().LoadFile().ConvertToTournamentModels(TeamFile, PeopleFile,PrizesFile);
+            List<TournamentModel> tournaments = TournamentFile.FullFilePath().LoadFile().ConvertToTournamentModels(TeamFile, PeopleFile, PrizesFile);
 
             int currentId = 1;
 
-            if(tournaments.Count>0)
+            if (tournaments.Count > 0)
             {
                 currentId = tournaments.OrderByDescending(x => x.Id).First().Id + 1;
             }
@@ -109,7 +109,7 @@ namespace TrackerLibrary
 
         public List<TeamModel> GetTeam_All()
         {
-            throw new NotImplementedException();
+            return TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
         }
     }
 }
